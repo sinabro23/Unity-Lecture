@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class InputManager 
 {
@@ -12,6 +13,9 @@ public class InputManager
 
     public void OnUpdate()
     {
+        if (EventSystem.current.IsPointerOverGameObject()) // 지금 UI버튼 위에 있는지
+            return;
+
         if (Input.anyKey && KeyAction != null)
             KeyAction.Invoke();
 

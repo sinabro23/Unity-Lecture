@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
     { 
         Managers.Input.MouseAction -= OnMouseDownClicked;
         Managers.Input.MouseAction += OnMouseDownClicked;
+        Managers.Resource.Instantiate("UI/UI_Button");
     }
 
 
@@ -25,11 +26,6 @@ public class PlayerController : MonoBehaviour
     }
 
     PlayerState _state = PlayerState.Idle;
-
-    void OnRunEvent()
-    {
-        Debug.Log("¶Ñ¹÷¶Ñ¹÷");
-    }
 
     void UpdateDie()
     {
