@@ -7,7 +7,7 @@ public class CameraController : MonoBehaviour
     [SerializeField]
     Define.CameraMode _mode = Define.CameraMode.QuaterView;
     [SerializeField]
-    Vector3 _delta = new Vector3(0.0f, 6.0f, -5.0f); // 플레이어 위치로부터 얼마나 떨어져있을지
+    Vector3 _delta = new Vector3(0.0f, 6.0f, -5.0f); // 플레이어 위치로부터 얼마나 떨어져있을지, 이자체가 플레이어로부터 카메라까지의 방향벡터임
     [SerializeField]
     GameObject _player = null; // 에디터에서 드래그앤 드롭으로 넣어줬음
     
